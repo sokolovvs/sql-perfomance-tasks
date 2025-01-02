@@ -1,0 +1,18 @@
+version: '3.9'
+
+services:
+  seeder:
+    build:
+      context: ..
+      dockerfile: caller/seeder.Dockerfile
+    environment:
+      DB_PASSWORD: "${DB_PASSWORD}"
+      DB_USER: "${DB_USER}"
+      DB_NAME: "${DB_NAME}"
+    volumes:
+      - '../:/var/www'
+    depends_on:
+      - mariadb
+      - pgsql
+    stdin_open: true
+    tty: true

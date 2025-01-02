@@ -1,0 +1,1 @@
+DB_PASSWORD=123456  DB_USER=caller DB_NAME=caller docker-compose -f ./caller/seeder.yaml -f mariadb.yaml -f pgsql.yaml up -d --build
