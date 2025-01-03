@@ -35,7 +35,7 @@ function generateCallData(int $id, \Faker\Generator $faker, int $operatorQty, in
         $faker->numberBetween(1, $operatorQty),
         $faker->numberBetween(1, $taskQty),
         $faker->numberBetween(5, 3600),
-        '\'' . $faker->dateTimeInInterval('-1 year 6 months')->format('Y-m-d H:i:s') . '\'',
+        '\'' . $faker->dateTimeInInterval('now', '-1 year 6 months')->format('Y-m-d H:i:s') . '\'',
     ];
 }
 
