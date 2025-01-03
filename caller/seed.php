@@ -65,7 +65,6 @@ function batchInsert(PDO $pdo, string $table, array $columns, array $dataBatch)
             $dataBatch
         );
 
-        file_put_contents(__DIR__ . '/sql.sql', $sql);
 
         $stmt = $pdo->prepare($sql);
         $stmt->execute();
